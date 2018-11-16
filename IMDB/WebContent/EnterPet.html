@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<script>
+function alpha(e) {
+    var k;
+    document.all ? k = e.keyCode : k = e.which;
+    return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+}
+</script>
+<head>
+<meta charset="ISO-8859-1">
+<title>IMDB Search</title>
+</head>
+<body>
+	<h1>Search for pet</h1>
+	<form action="SearchPetsByQuery" method="POST">
+	<label>Gender
+		<input type="radio" name="gender" value="M"> Male
+  	  	<input type="radio" name="gender" value="F"> Female
+ 	<br></label>
+	<label>Species
+		<input type="radio" name="species" value="Dog"> Dog
+  	  	<input type="radio" name="species" value="Cat"> Cat
+ 	<br></label>
+ 	<label>Age
+ 	<select name="age">
+	  <option value="puupy">Puppy</option>
+	  <option value="young">Young</option>
+	  <option value="adult">Adult</option>
+	  <option value="old">Old</option>
+	</select>
+	</label></br>
+	<label>Color
+ 	<select name="Color">
+	  <option value="brown">Brown</option>
+	  <option value="white">White</option>
+	  <option value="black">Black</option>
+	  <option value="gold">Gold</option>
+	</select>
+	</label>
+   <input type="submit" value="Submit">
+	
+	</form>
+</body>
+</html>
